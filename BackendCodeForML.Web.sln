@@ -5,11 +5,13 @@ VisualStudioVersion = 17.9.34902.65
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BackendCodeForML.Web", "BackendCodeForML.Web\BackendCodeForML.Web.csproj", "{F54BEAD9-4C97-47BE-AB0A-8FA1B795DFCB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackendCodeForML.Models", "BackendCodeForML.Models\BackendCodeForML.Models.csproj", "{C1993016-A1ED-42A1-B3FC-34C2367523D0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BackendCodeForML.Models", "BackendCodeForML.Models\BackendCodeForML.Models.csproj", "{C1993016-A1ED-42A1-B3FC-34C2367523D0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackendCodeForML.Data", "BackendCodeForML.Data\BackendCodeForML.Data.csproj", "{7046FAAA-7534-4573-A50F-ECDA2A378846}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BackendCodeForML.Data", "BackendCodeForML.Data\BackendCodeForML.Data.csproj", "{7046FAAA-7534-4573-A50F-ECDA2A378846}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackendCodeForML.Services", "BackendCodeForML.Services\BackendCodeForML.Services.csproj", "{9A9C56B8-6FE2-4B1A-96EF-49585F8866C2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BackendCodeForML.Services", "BackendCodeForML.Services\BackendCodeForML.Services.csproj", "{9A9C56B8-6FE2-4B1A-96EF-49585F8866C2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CommonServices", "CommonServices\CommonServices.csproj", "{E2199820-FF96-4309-8AFB-990A2CE2FA43}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{9A9C56B8-6FE2-4B1A-96EF-49585F8866C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9A9C56B8-6FE2-4B1A-96EF-49585F8866C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9A9C56B8-6FE2-4B1A-96EF-49585F8866C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2199820-FF96-4309-8AFB-990A2CE2FA43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2199820-FF96-4309-8AFB-990A2CE2FA43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2199820-FF96-4309-8AFB-990A2CE2FA43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2199820-FF96-4309-8AFB-990A2CE2FA43}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

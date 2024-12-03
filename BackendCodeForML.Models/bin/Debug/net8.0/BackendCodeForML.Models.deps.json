@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "BackendCodeForML.Models/1.0.0": {
+        "runtime": {
+          "BackendCodeForML.Models.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "BackendCodeForML.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
