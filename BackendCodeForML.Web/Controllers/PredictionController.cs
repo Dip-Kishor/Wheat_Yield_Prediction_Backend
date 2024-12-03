@@ -7,7 +7,6 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace BackendCodeForML.Web.Controllers
 {
-    [AllowAnonymous]
     [ApiController]
     [Route("api/[controller]")]
     public class PredictionController : ControllerBase
@@ -18,7 +17,7 @@ namespace BackendCodeForML.Web.Controllers
         {
             _predictionService = predictionService;
         }
-        //[Authorize(Policy = "SuperAdmin")]
+        [Authorize(Policy = "SuperAdmin")]
 
         [HttpPost("GetPrediction")]
         public async Task<IActionResult> GetPredictionAsync( PredictionRequestModel request)
