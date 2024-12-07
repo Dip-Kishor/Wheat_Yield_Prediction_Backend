@@ -6,5 +6,5 @@ using System.Threading.Tasks;
 
 namespace CommonServices
 {
-    public record LoginResponse(bool Flag, string? AccessToken, string? Message);
+    public record LoginResponse(bool Flag, string? AccessToken, string? Message, string Name,string email);
 }

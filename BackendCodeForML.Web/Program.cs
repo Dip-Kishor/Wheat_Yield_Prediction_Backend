@@ -85,6 +85,7 @@ builder.Services.AddSwaggerGen();
 
 
 var app = builder.Build();
+app.UseCors("AllowReactApp");
 
 
 if (app.Environment.IsDevelopment())

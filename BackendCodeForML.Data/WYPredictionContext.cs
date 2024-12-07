@@ -17,5 +17,6 @@ namespace BackendCodeForML.Data
          public DbSet<RegisterModel> Users { get; set; }
          public DbSet<UserRoleModel> UserRoles { get; set; }
          public DbSet<DistrictData> EDistrict { get; set; }
+        public DbSet<UserPredictionDetailModel> UserPredictionDetail { get; set; }
     }
 }
