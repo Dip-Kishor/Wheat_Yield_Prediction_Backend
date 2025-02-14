@@ -94,20 +94,20 @@ namespace BackendCodeForML.Services
 
             if(model == null)
             {
-                return new LoginResponse(false, null!, "Invalid input");
+                return new LoginResponse(false, null!, "Invalid input", null!, null!);
                 
             }
 
             var getUser = _context.Users.FirstOrDefault(x=>x.Email == model.Email);
             if(getUser == null)
             {
-                return new LoginResponse(false, null!, "User not found");
+                return new LoginResponse(false, null!, "User not found",null!,null!);
 
             }
 
             if (getUser.Password != model.Password)
             {
-                return new LoginResponse(false, null!, "Invalid Username/Password");
+                return new LoginResponse(false, null!, "Invalid Username/Password", null!, null!);
             }
             var userRole = _context.Users
             .Include(u => u.Role) 
@@ -118,7 +118,7 @@ namespace BackendCodeForML.Services
             var userSession = new UserSession(getUser.UserId, getUser.Username, getUser.Email, roleName);
             string accessToken = GenerateAccessToken(userSession);
 
-            return new LoginResponse(true, accessToken, "User Logged in successfully");
+            return new LoginResponse(true, accessToken, "User Logged in successfully",getUser.Username,getUser.Email);
 
         }
         public void Logout()
@@ -145,7 +145,7 @@ namespace BackendCodeForML.Services
                 issuer: _configuration["AccessToken:Issuer"],
                 audience: _configuration["AccessToken:Audience"],
                 claims: userClaims,
-                expires: DateTime.UtcNow.AddDays(1.5),
+                expires: DateTime.UtcNow.AddDays(7),
                 signingCredentials: credentials
             );
             return new JwtSecurityTokenHandler().WriteToken(accessToken);

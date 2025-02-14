@@ -11,6 +11,11 @@ using System.Text.Json;
 var builder = WebApplication.CreateBuilder(args);
 
 
+var port = Environment.GetEnvironmentVariable("PORT") ?? "8080";
+builder.WebHost.UseUrls($"http://*:{port}");
+
+builder.Services.AddHealthChecks();
+
 builder.Services.AddDbContext<WYPredictionContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("WYpredictionContext")));// ?? throw new InvalidOperationException("Connection string 'BWIJAN20WEBContext' not found.")));
 
@@ -85,6 +90,7 @@ builder.Services.AddSwaggerGen();
 
 
 var app = builder.Build();
+app.UseCors("AllowReactApp");
 
 
 if (app.Environment.IsDevelopment())
@@ -104,6 +110,7 @@ app.UseRouting();
 
 app.UseAuthorization();
 
+app.UseHealthChecks("/health");
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");

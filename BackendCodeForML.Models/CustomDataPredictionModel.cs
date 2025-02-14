@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BackendCodeForML.Models
 {
-    public class PredictionModel
+    public class CustomDataPredictionModel
     {
         public decimal Rainfall { get; set; }
         public decimal AvgTemp { get; set; }
@@ -19,20 +19,4 @@ namespace BackendCodeForML.Models
         public decimal Clay { get; set; }
         public decimal ProductionArea { get; set; }
     }
-    public class ResponseModel
-    {
-        public decimal Prediction { get; set; }
-    }
-    public class PredictionRequestModel
-    {
-        public string District { get; set; }
-    }
-
-    public class PredictionResponseModel
-    {
-        public string DistrictName { get; set; }
-        public PredictionModel InputData { get; set; }
-        public ResponseModel PredictionResult { get; set; }
-    }
-
 }
