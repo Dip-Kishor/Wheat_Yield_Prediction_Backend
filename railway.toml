@@ -1,0 +1,8 @@
+[build]
+builder = "dockerfile"
+dockerfilePath = "./BackendCodeForML.Web/Dockerfile"
+
+[deploy]
+startCommand = "./BackendCodeForML.Web"
+restartPolicyType = "always"
+healthCheckPath = "/health"

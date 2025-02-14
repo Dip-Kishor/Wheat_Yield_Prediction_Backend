@@ -47,6 +47,7 @@ namespace BackendCodeForML.Web.Controllers
             }
            
             var saveData = _predictionService.SaveUserPredictionDetails(userId, userName, request.District,serviceResult.Data.PredictionResult.Prediction);
+            await Task.Delay(2000);
             return Ok(new
             {
                 Message = serviceResult.Message,
@@ -85,6 +86,7 @@ namespace BackendCodeForML.Web.Controllers
             {
                 return StatusCode(500, serviceResult.Message);
             }
+            await Task.Delay(2000);
             //var saveData = _predictionService.SaveUserPredictionDetails(userId, userName, request, serviceResult.Data.PredictionResult.Prediction);
             return Ok(new
             {
